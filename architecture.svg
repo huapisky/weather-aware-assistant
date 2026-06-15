@@ -1,0 +1,76 @@
+<svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="560" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Weather-Aware Personal Assistant: Architecture</text>
+  <text x="380" y="58" text-anchor="middle" font-size="12" fill="#64748b">EDS 6397 Project | Modular Python CLI</text>
+
+  <!-- User -->
+  <rect x="310" y="80" width="140" height="44" rx="22" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="107" text-anchor="middle" font-size="14" fill="#334155">User (terminal)</text>
+
+  <!-- main.py -->
+  <rect x="270" y="170" width="220" height="70" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="380" y="198" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e3a8a">main.py</text>
+  <text x="380" y="218" text-anchor="middle" font-size="11" fill="#1e40af">REPL orchestrator (FR-5)</text>
+
+  <!-- calendar_service -->
+  <rect x="40" y="320" width="200" height="80" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="140" y="348" text-anchor="middle" font-size="14" font-weight="bold" fill="#14532d">calendar_service.py</text>
+  <text x="140" y="368" text-anchor="middle" font-size="11" fill="#166534">Load + validate events</text>
+  <text x="140" y="384" text-anchor="middle" font-size="11" fill="#166534">(FR-1, FR-3)</text>
+
+  <!-- weather_service -->
+  <rect x="280" y="320" width="200" height="80" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <text x="380" y="348" text-anchor="middle" font-size="14" font-weight="bold" fill="#713f12">weather_service.py</text>
+  <text x="380" y="368" text-anchor="middle" font-size="11" fill="#854d0e">Geocode + forecast</text>
+  <text x="380" y="384" text-anchor="middle" font-size="11" fill="#854d0e">(FR-2, NFR-3)</text>
+
+  <!-- advice_engine -->
+  <rect x="520" y="320" width="200" height="80" rx="8" fill="#fae8ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="620" y="348" text-anchor="middle" font-size="14" font-weight="bold" fill="#581c87">advice_engine.py</text>
+  <text x="620" y="368" text-anchor="middle" font-size="11" fill="#6b21a8">Rule-based advice</text>
+  <text x="620" y="384" text-anchor="middle" font-size="11" fill="#6b21a8">(FR-4, pure logic)</text>
+
+  <!-- calendar.json -->
+  <path d="M 70 460 h 120 a10 10 0 0 1 10 10 v 40 a10 10 0 0 1 -10 10 h -120 a10 10 0 0 1 -10 -10 v -40 a10 10 0 0 1 10 -10 z" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="140" y="488" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">calendar.json</text>
+  <text x="140" y="506" text-anchor="middle" font-size="11" fill="#64748b">local event data</text>
+
+  <!-- Open-Meteo cloud -->
+  <ellipse cx="380" cy="490" rx="105" ry="38" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="380" y="486" text-anchor="middle" font-size="13" font-weight="bold" fill="#0c4a6e">Open-Meteo API</text>
+  <text x="380" y="504" text-anchor="middle" font-size="11" fill="#075985">external dependency</text>
+
+  <!-- tests -->
+  <rect x="520" y="450" width="200" height="70" rx="8" fill="#ffe4e6" stroke="#f43f5e" stroke-width="2"/>
+  <text x="620" y="478" text-anchor="middle" font-size="13" font-weight="bold" fill="#881337">tests/ (pytest)</text>
+  <text x="620" y="496" text-anchor="middle" font-size="11" fill="#9f1239">16 tests, mocked API</text>
+  <text x="620" y="510" text-anchor="middle" font-size="11" fill="#9f1239">core logic 89% coverage</text>
+
+  <!-- Arrows -->
+  <line x1="380" y1="124" x2="380" y2="166" stroke="#475569" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="392" y="150" font-size="10" fill="#64748b">commands / output</text>
+
+  <line x1="300" y1="240" x2="160" y2="316" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="180" y="272" font-size="10" fill="#64748b">load_events()</text>
+
+  <line x1="380" y1="240" x2="380" y2="316" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="390" y="280" font-size="10" fill="#64748b">get_forecast()</text>
+
+  <line x1="460" y1="240" x2="600" y2="316" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="540" y="272" font-size="10" fill="#64748b">generate_advice()</text>
+
+  <line x1="140" y1="404" x2="140" y2="456" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="150" y="434" font-size="10" fill="#64748b">reads</text>
+
+  <line x1="380" y1="404" x2="380" y2="448" stroke="#475569" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="390" y="430" font-size="10" fill="#64748b">HTTPS, 3 s timeout</text>
+
+  <line x1="620" y1="404" x2="620" y2="446" stroke="#475569" stroke-width="2" stroke-dasharray="5 4" marker-start="url(#arrow)"/>
+  <text x="630" y="430" font-size="10" fill="#64748b">verified by</text>
+</svg>
