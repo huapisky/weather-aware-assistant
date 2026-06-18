@@ -66,7 +66,7 @@ The clearest drift was premature victory. After the first build, the agent repor
 
 I never swung it. Every line of code in this project came from the AI; I steered entirely through prompts and constraints, and I did not hand-edit a single module. I want to be honest about that rather than invent a rescue story, but I also do not think "no manual fixes" means I got lucky. Three things made the hammer unnecessary:
 
-1. **Tight scope.** The PRD's non-goals (no Google Calendar sync, no GPS, no LLM, no multi-user) kept the surface area small. There was less room for the AI to go wrong because there was less to build.
+1. **Tight scope.** Thanks to ChatGPT's PRD Builder, the PRD's non-goals kept the surface area small. There was less room for the AI to go wrong because there was less to build.
 2. **Constraints up front, not corrections after.** `docs/rules.md` set the architecture rules before any code was written: pure advice engine, typed exceptions, no logic in main.py. Steering at the design level meant I rarely had to correct at the code level.
 3. **Tests caught the one real defect before I did.** The coverage gap in `weather_service.py` (described above) was a genuine logic blind spot. But the fix was another prompt ("add a happy-path test for the forecast parser"), not a manual edit. The guardrail surfaced the problem and re-prompting closed it.
 
